@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  docker-apache:
+    build: .
+    container_name: "APACHE"
+    #restart: always
+    ports:
+      - 80:80
+    volumes:
+      - ./src/:/var/www/html:rw
